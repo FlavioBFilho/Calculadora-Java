@@ -77,16 +77,16 @@ public class CalculadoraController {
         
         switch(this.op){
             case '+':
-                setRes(adicionar());
+                this.setRes(this.adicionar());
                 break;
             case '-':
-                setRes(subtrair());
+                this.setRes(this.subtrair());
                 break;
             case '*':
-                setRes(multiplicar());
+                this.setRes(this.multiplicar());
                 break;
             case '/':
-                setRes(dividir());
+                this.setRes(this.dividir());
                 break;
         }
       
