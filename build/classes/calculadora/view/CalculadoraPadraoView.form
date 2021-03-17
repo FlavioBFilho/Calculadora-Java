@@ -36,6 +36,8 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Calculadora"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
@@ -118,6 +120,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="%"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnPorcentagemActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jBtnMaisMenos">
           <Properties>

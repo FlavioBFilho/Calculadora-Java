@@ -69,10 +69,6 @@ public class CalculadoraController {
         return this.a*this.b;
     }
     
-    public double porcentagem(){
-        return 0;
-    }
-    
     public void igual(){
         
         switch(this.op){

@@ -61,6 +61,8 @@ public class CalculadoraPadraoView extends javax.swing.JFrame {
         jMenuConversor = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Calculadora");
+        setResizable(false);
 
         jTxtTela.setEditable(false);
         jTxtTela.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
@@ -70,6 +72,11 @@ public class CalculadoraPadraoView extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
         jBtnPorcentagem.setText("%");
+        jBtnPorcentagem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnPorcentagemActionPerformed(evt);
+            }
+        });
         jPanel1.add(jBtnPorcentagem);
 
         jBtnMaisMenos.setText("+/-");
@@ -297,7 +304,7 @@ public class CalculadoraPadraoView extends javax.swing.JFrame {
         int x2 = x1.intValue();
         
         if(x1>x2){
-            return String.format("%.5f", x1).replace(',', '.');
+            return String.format("%.2f", x1).replace(',', '.');
         }
         else{
             return Integer.toString(x2);
@@ -331,6 +338,11 @@ public class CalculadoraPadraoView extends javax.swing.JFrame {
             jTxtTela.setText("0");
         }
     }//GEN-LAST:event_jBtnBackActionPerformed
+
+    private void jBtnPorcentagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnPorcentagemActionPerformed
+        double p = Double.parseDouble(jTxtTela.getText()) / 100;
+        jTxtTela.setText(trataInteiro(calc.getA() * p));
+    }//GEN-LAST:event_jBtnPorcentagemActionPerformed
 
     private void operacao(java.awt.event.ActionEvent evt){
         double x = Double.parseDouble(jTxtTela.getText());
