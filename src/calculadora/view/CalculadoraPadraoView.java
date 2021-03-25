@@ -322,6 +322,10 @@ public class CalculadoraPadraoView extends javax.swing.JFrame {
 
     private void jBtnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnClearActionPerformed
         jTxtTela.setText("0");
+        calc.setA(0);
+        calc.setB(0);
+        calc.setOp(' ');
+        calc.setRes(0);
     }//GEN-LAST:event_jBtnClearActionPerformed
 
     private void jBtnMaisMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnMaisMenosActionPerformed
